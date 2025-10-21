@@ -1,0 +1,44 @@
+[project]
+name = "mcp-python-twi"
+version = "0.1.0"
+description = "LMMS MCP Servers"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp",
+    "numpy>=2.2.6",
+    "pillow>=11.3.0",
+    "pydantic>=2.12.1",
+    "transformers>=4.57.1",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["clients", "servers", "servers.mcp_server_twi"]
+
+
+#[[tool.uv.index]]
+#url = "http://af.hikvision.com.cn/artifactory/api/pypi/pypi/simple/"
+#url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+#default = true
+
+[project.scripts]
+server = "servers:run_server"
+mcp-server-twi = "servers.mcp_server_twi.server:main"
+
+client-dev = "clients.stdio_client_dev:main"
+twi-client-test = "clients.twi_client_test:main"
+
+echo-client-performance-dev = "clients.stdio_client_performance_echo:main"
+display-utilities-client-dev = "clients.display_utilities_dev:main"
+
+
+# export PATH=/mnt/hzw/mcp-demo/uv-x86_64-unknown-linux-gnu:$PATH
+# uv run display-utilities-client-dev
+# uv run echo-client-performance-dev
+
+# uv run client-dev
+# uv run twi-client-test
