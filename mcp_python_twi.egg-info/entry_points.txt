@@ -1,0 +1,7 @@
+[console_scripts]
+client-dev = clients.stdio_client_dev:main
+display-utilities-client-dev = clients.display_utilities_dev:main
+echo-client-performance-dev = clients.stdio_client_performance_echo:main
+mcp-server-twi = servers.mcp_server_twi.server:main
+server = servers:run_server
+twi-client-test = clients.twi_client_test:main

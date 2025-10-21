@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: mcp-python-twi
+Version: 0.1.0
+Summary: LMMS MCP Servers
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: mcp
+Requires-Dist: numpy>=2.2.6
+Requires-Dist: pillow>=11.3.0
+Requires-Dist: pydantic>=2.12.1
+Requires-Dist: transformers>=4.57.1

@@ -1,0 +1,5 @@
+mcp
+numpy>=2.2.6
+pillow>=11.3.0
+pydantic>=2.12.1
+transformers>=4.57.1
